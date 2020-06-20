@@ -999,3 +999,17 @@ print(arrayEquals([1,2,3].flatMap(function(x) {
   return [x, x+this];
 }, 100), [1,101,2,102,3,103]));
 // CHECK-NEXT: true
+var arr = [
+  { "i": 0, "key": 1 }, 
+  { "i": 1, "key": 1 },
+  { "i": 2, "key": 1 },
+  { "i": 3, "key": 1 },
+  { "i": 4, "key": 2 },
+  { "i": 5, "key": 1 },
+  { "i": 6, "key": 1 },
+  { "i": 7, "key": 1 }
+].sort((x, y) => {
+  return x.key - y.key
+}).map(v => v.i);
+print(arr);
+// CHECK-NEXT: [0,1,2,3,5,6,7,4]

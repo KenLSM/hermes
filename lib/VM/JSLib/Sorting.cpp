@@ -275,5 +275,9 @@ ExecutionStatus quickSort(SortModel *sm, uint32_t begin, uint32_t end) {
   }
 }
 
+ExecutionStatus timSort(SortModel *sm, u_int32_t begin, u_int32_t end) {
+  
+}
+
 } // namespace vm
 } // namespace hermes
